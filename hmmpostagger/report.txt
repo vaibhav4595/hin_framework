@@ -1,0 +1,12 @@
+Second order HMM
+
+Language = Hindi
+
+Smoothing used = interpolated laplace smoothing:
+	lambda = 0.1
+	l1 = 0.6 (trigram/bigram coefficient)
+	l2 = 0.4 (bigram/unigram coefficient)
+
+Sentence accuracy (no of sentences tagged correctly) :  		0.2
+Correct tags/sent accuracy (avg no of words/sent tagged correctly) :    0.801603202353
+Tag accuracy (total words tagged correctly) :  				0.814102564103
