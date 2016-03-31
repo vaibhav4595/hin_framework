@@ -3,6 +3,7 @@ import tokenizer
 reload(sys)
 sys.setdefaultencoding("utf-8")
 
+punc_list = ['~', '`', '``', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '.', ',', '{', '}', '[', ']', '|', ':', '-']
 
 def get_stop_list(filename, size):
     """
@@ -28,4 +29,9 @@ def get_stop_list(filename, size):
     # the dictionary is sorted based on word frequency
     finaltup = sorted(dic.items(), key=lambda x:x[1], reverse=True)
 
-    return finaltup[:size]
+    sendtup = []
+    for each in finaltup:
+        if (each[0] not in punc_list) and (each[0] != u'\u0964'):
+            sendtup.append(each)
+
+    return sendtup[:size]
