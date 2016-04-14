@@ -1,0 +1,2 @@
+Vocabulary Size is  372598
+Number of articles which had no mCategory field were  95786
